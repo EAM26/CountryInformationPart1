@@ -9,14 +9,8 @@ async function fetchCountries() {
     // loop through all countries
     response.data.map((country) => {
         // create variables with info
-        const name = country.name.official;
-        console.log(name)
-        const flag = country.flags.svg;
-        const alt = country.flags.alt
-        const population = country.population;
+        const {name: {official: name}, population: {population}, flags: {svg: flag, alt}} = country;
         const colorClass = getColor(country.region)
-        console.log(country.region)
-
         // call createListItem and concat info
         infoCountries += createListItem(name, flag, alt, population, colorClass)
     })
