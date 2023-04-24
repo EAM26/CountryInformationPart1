@@ -1,3 +1,59 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+* {
+  box-sizing: border-box;
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
+}
+
+body .outer-container {
+  height: 100vh;
+  background-color: #ff0;
+  flex-direction: row;
+  display: flex;
+}
+
+main .inner-container {
+  width: 1200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.world-map {
+  width: 100%;
+}
+
+.flag {
+  width: 100px;
+  height: 50px;
+}
+
+.inner-list-item {
+  flex-direction: row;
+  display: flex;
+}
+
+li {
+  height: 120px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  display: flex;
+  overflow: auto;
+}
+
+ul {
+  width: 80%;
+  column-count: 3;
+  column-width: 30em;
+  border: 1px solid gray;
+  list-style: none;
+}
+
 .blue {
   color: #00f;
 }
@@ -16,6 +72,10 @@
 
 .purple {
   color: purple;
+}
+
+.orange {
+  color: orange;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */

@@ -10,10 +10,13 @@ async function fetchCountries() {
     response.data.map((country) => {
         // create variables with info
         const name = country.name.official;
-        const flag = country.flags.png;
+        console.log(name)
+        const flag = country.flags.svg;
         const alt = country.flags.alt
         const population = country.population;
         const colorClass = getColor(country.region)
+        console.log(country.region)
+
         // call createListItem and concat info
         infoCountries += createListItem(name, flag, alt, population, colorClass)
     })
@@ -24,10 +27,17 @@ async function fetchCountries() {
 
 // Return info per country in right format
 function createListItem(name, flag, alt, population, colorClass) {
-    return `<li><img src=${flag} alt=${alt}> <span class=${colorClass}>${name}</span> <p>Has a population of  ${population} people</p></li>`
+    return `<li>
+<div class="inner-list-item">
+<img class="flag" src=${flag} alt=${alt}> 
+<span class=${colorClass}>${name}
+</span>
+</div>
+ <p>Has a population of  ${population} people
+ </p>
+ </li>`
 }
 
-// Get right class color based on region
 function getColor(region) {
     if (region === 'Africa') {
         return 'blue'
@@ -39,8 +49,10 @@ function getColor(region) {
         return 'yellow'
     } else if(region === 'Oceania') {
         return 'purple'
-    } else {
+    } else if(region === 'Antarctic') {
         return 'grey'
+    } else {
+        return 'orange'
     }
 
 }

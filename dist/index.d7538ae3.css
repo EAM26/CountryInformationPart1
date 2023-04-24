@@ -1,0 +1,90 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.outer-container {
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+.inner-container {
+  flex-direction: column;
+  flex: 0 1200px;
+  align-items: center;
+  margin-inline: 20px;
+  display: flex;
+}
+
+h1 {
+  font-family: Leckerli One, cursive;
+  font-size: 3em;
+}
+
+.world-map {
+  max-width: 100%;
+}
+
+ul {
+  column-count: 3;
+  column-width: 20em;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+li {
+  padding: 10px;
+  overflow: auto;
+}
+
+.inner-list-item {
+  flex-direction: row;
+  display: flex;
+}
+
+.flag {
+  max-height: 20px;
+  width: 40px;
+  padding-right: 5px;
+}
+
+span {
+  font-size: 20px;
+}
+
+.blue {
+  color: #00f;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: #ff0;
+}
+
+.purple {
+  color: purple;
+}
+
+.grey {
+  color: gray;
+}
+
+.orange {
+  color: #ff8c00;
+}
+
+/*# sourceMappingURL=index.d7538ae3.css.map */
